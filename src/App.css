@@ -1,38 +1,135 @@
 .App {
   text-align: center;
+  background: black;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --score-line-color: #181818;
+  --text-color: #aaa;
+  --text-active-color: #ff8a00;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 4px 2px 4px;
+}
+
+.sports-tab {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.sport {
+  padding: 10px;
+  width: 130px;
+  border-radius: 30px 30px 30px 30px;
+  background: white;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 0 15px 0 15px 
+}
+
+.sport-alt {
+  padding: 10px;
+  width: 130px;
+  border-radius: 30px 30px 30px 30px;
+  background: var(--score-line-color);
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 700;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 0 15px 0 15px
+}
+
+.date-bar {
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.live{
+  color: black;
+  background-color: var(--text-color);
+  font-weight: 700;
+  padding: 8px;
+  border-radius: 5px 5px 5px 5px;
+  animation: Pulsating-live-button infinite 3s ease-in-out;
+}
+
+@keyframes Pulsating-live-button {
+  0% {
+    background-color: var(--text-color);
+  }
+  50% {
+    background-color : white;
+  }
+  100%{
+    background-color: var(--text-color);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.date-day {
+  line-height: 1px;
+}
+
+.date-day.active p {
+  color: var(--text-active-color);
+}
+
+.day{
+  font-size: 15px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.date {
+  font-size: 11px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.league {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flag, .next-button {
+  color: white;
+  width: 15%;
+}
+
+.league-name{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.league-country{
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.league-details{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 70%;
+  line-height: 1px;
 }
