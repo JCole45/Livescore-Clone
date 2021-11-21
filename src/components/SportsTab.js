@@ -9,6 +9,7 @@ const SportsTab = () => {
             <div className="sport-alt"> Hockey </div>
             <div className="sport-alt"> Cycling </div>
             <div className="sport-alt"> NFL </div>
+            <div className="sport-alt"> Basket Ball </div>
         </section>
     )
 }
